@@ -1,5 +1,5 @@
 import { IncomingMessage, ServerResponse } from 'http';
-import { getUsers, getUser, createUser, updateUser, deleteUser } from './src/controllers/userController';
+import { getUsers, getUser, createUser, updateUser, deleteUser } from './controllers/userController';
 
 export function createServer(req: IncomingMessage, res: ServerResponse) {
   const { method, url } = req;

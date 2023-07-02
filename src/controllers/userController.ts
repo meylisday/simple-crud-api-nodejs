@@ -5,7 +5,7 @@ import { IUser } from "../types";
 
 const database: Record<string, IUser> = {};
 
-export function getUsers(req: IncomingMessage, res: ServerResponse) {
+export function getUsers(_req: IncomingMessage, res: ServerResponse) {
   try {
     const users = Object.values(database);
     res.statusCode = 200;
