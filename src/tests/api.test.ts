@@ -1,16 +1,19 @@
 import http from 'http';
 import { createServer } from '../app';
+import dotenv from 'dotenv';
+dotenv.config();
+
+//MAKE SURE THAT SERVER IS NOT RUNNING AND THE PORT IS FREE
 
 describe('API Tests', () => {
   let server: http.Server;
-  let serverAddress: string;
+  const PORT = process.env.PORT;
+  let serverAddress = `http://localhost:${PORT}`;
 
   beforeAll((done) => {
     server = http.createServer(createServer);
-    server.listen(0, () => {
-      serverAddress = `http://localhost:${process.env.PORT}`;
-      done();
-    });
+    server.listen(PORT, () => {});
+    done();
   });
 
   afterAll((done) => {
