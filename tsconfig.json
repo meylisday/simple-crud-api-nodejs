@@ -1,28 +1,20 @@
 {
 	"compilerOptions": {
-		"target": "ESNext",
-		"module": "ESNext",
-		"moduleResolution": "Node",
-		"rootDir": ".",
-		"outDir": "build",
-		"esModuleInterop": true,
-		"forceConsistentCasingInFileNames": true,
-		"strict": true,
-		"skipLibCheck": true,
-		"allowSyntheticDefaultImports": true,
-		"importHelpers": true,
-		"alwaysStrict": true,
-		"sourceMap": true,
-		"noFallthroughCasesInSwitch": true,
-		"noImplicitReturns": true,
-		"noUnusedLocals": true,
-		"noUnusedParameters": true,
-		"noImplicitAny": false,
-		"noImplicitThis": false,
-		"strictNullChecks": false
+	  "target": "ES2021",
+	  "module": "commonjs",
+	  "outDir": "./dist",
+	  "rootDir": "./src",
+	  "strict": true,
+	  "esModuleInterop": true,
+	  "moduleResolution": "node",
+	  "forceConsistentCasingInFileNames": true,
+	  "baseUrl": ".",
+	  "paths": {
+		"~/*": ["src/*"],
+		".../*": ["*"]
+	  },
+	  "lib": ["ES2021", "DOM"]
 	},
-  "ts-node": {
-    "esm": true
-},
-	"include": ["src/**/*", "__tests__/**/*"]
-}
+	"include": ["src/**/*.ts"],
+	"exclude": ["node_modules"]
+  }
