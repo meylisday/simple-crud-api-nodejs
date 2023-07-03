@@ -4,7 +4,7 @@ Run ``git checkout dev``
 Run ``npm i``   
 Run for dev ``npm run start:dev``    
 or Run for prod ``npm run start:prod``   
-Run for tests ``npm run test``   
+Run for tests ``npm run test`` (the server should not be running and the port should be free)   
 Go to http://localhost:5000   
 
 **Create new user**
